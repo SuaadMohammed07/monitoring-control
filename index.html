@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ورقة عمل تفاعلية | المراقبة والتحكم والذكاء الاصطناعي</title>
+<style>
+:root{--navy:#17324d;--teal:#0e8b8b;--pink:#f4dce8;--pale:#f4f8fb;--line:#d8e3ec;--gold:#f4c96b}
+*{box-sizing:border-box}
+body{margin:0;background:#edf3f7;color:#243447;font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+.page{max-width:900px;margin:22px auto;background:#fff;padding:30px;border-radius:18px;box-shadow:0 6px 24px #18324d12}
+header{background:linear-gradient(120deg,#17324d,#0e8b8b);color:#fff;border-radius:16px;padding:24px;text-align:center}
+header h1{margin:0 0 6px;font-size:27px} header p{margin:0;color:#eafafa}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.info label{display:flex;gap:8px;align-items:center;background:var(--pale);padding:9px 12px;border-radius:10px}
+.info input{min-width:0;width:100%;border:0;border-bottom:1px solid #9aabba;background:transparent;padding:5px;font:inherit;outline:none}
+.notice{background:#fff7df;border-right:5px solid var(--gold);padding:10px 14px;border-radius:8px;margin:14px 0}
+.section-title{background:var(--pink);color:#743b59;padding:8px 13px;border-radius:9px;font-weight:bold;margin:24px 0 12px}
+.q{border:1px solid var(--line);border-radius:13px;padding:15px;margin:12px 0;break-inside:avoid}
+.q h3{font-size:16px;margin:0 0 10px;color:var(--navy)}
+.tag{display:inline-block;background:#e2f4f2;color:#126c6b;border-radius:20px;padding:1px 9px;font-size:12px;margin-left:6px}
+.options{display:grid;gap:7px}
+.option{display:flex;align-items:flex-start;gap:8px;background:#f8fafc;border:1px solid #e5ebf0;padding:7px 10px;border-radius:8px;cursor:pointer}
+.option input{margin-top:8px;accent-color:var(--teal)}
+textarea,.short{width:100%;border:1px solid #bdcbd6;border-radius:8px;padding:10px;font:inherit;background:#fff}
+textarea{min-height:75px;resize:vertical}
+.short{max-width:100%;margin-top:4px}
+.matchrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;margin:8px 0}
+.matchrow select{width:100%;padding:9px;border:1px solid #bdcbd6;border-radius:8px;font:inherit;background:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0}
+button{border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:bold;cursor:pointer}
+.primary{background:var(--teal);color:white}.secondary{background:#e8eef4;color:var(--navy)}.check{background:#17324d;color:white}
+.feedback{margin-top:10px;font-weight:bold}.correct{color:#087a45}.wrong{color:#b23a48}
+footer{text-align:center;color:#65788a;font-size:12px;border-top:1px solid var(--line);padding-top:12px;margin-top:20px}
+@media(max-width:600px){.page{margin:0;padding:16px;border-radius:0}.info{grid-template-columns:1fr}header h1{font-size:22px}.matchrow{grid-template-columns:1fr}.q{padding:12px}}
+@media print{
+ body{background:white;font-size:12pt}.page{max-width:none;margin:0;padding:8mm;box-shadow:none;border-radius:0}
+ header{background:#e8f3f4!important;color:#17324d!important;border:1px solid #9dbfc2;print-color-adjust:exact}
+ header p{color:#17324d!important}.actions,.notice.noprint,.feedback{display:none!important}
+ .q{break-inside:avoid;border-color:#aaa;padding:10px;margin:8px 0}
+ textarea{min-height:55px;border:1px solid #888}
+ input,textarea,select{color:#111!important}
+ .section-title{print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<main class="page">
+<header>
+<h1>ورقة عمل تفاعلية</h1>
+<p>المراقبة والتحكم • المستشعرات • الذكاء الاصطناعي</p>
+<p>مادة التقنية الرقمية</p>
+</header>
+<div class="info">
+<label>اسم الطالبة: <input id="studentName" type="text" placeholder="اكتبي اسمك"></label>
+<label>الصف: <input id="className" type="text" placeholder="اكتبي الصف"></label>
+</div>
+<div class="notice noprint">أجيبي عن الأسئلة مباشرة في الورقة. بعد الانتهاء اضغطي <b>«حفظ الإجابات PDF»</b>، ثم اختاري <b>حفظ كـ PDF</b> من نافذة الطباعة. تظهر إجاباتك المكتوبة في الملف.</div>
+
+<div class="section-title">أولًا: المراقبة والتحكم والمستشعرات</div>
+<div class="q" data-answer="b">
+<h3>١. ما الهدف الأساسي من نظام المراقبة؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q1" value="a"> تنفيذ الأوامر وتغيير حالة الأجهزة فقط</label>
+<label class="option"><input type="radio" name="q1" value="b"> جمع البيانات ومتابعة الحالة وعرض المعلومات</label>
+<label class="option"><input type="radio" name="q1" value="c"> تخزين الملفات والصور فقط</label>
+</div><div class="feedback"></div>
+</div>
+<div class="q" data-answer="c">
+<h3>٢. أي عبارة تصف نظام التحكم؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q2" value="a"> يكتفي بعرض المعلومات دون التأثير في النظام</label>
+<label class="option"><input type="radio" name="q2" value="b"> يستخدم لقياس الضوء فقط</label>
+<label class="option"><input type="radio" name="q2" value="c"> ينفّذ أوامر لتنظيم عمل جهاز أو عملية والتحكم فيها</label>
+</div><div class="feedback"></div>
+</div>
+<div class="q">
+<h3>٣. في المكيف، ما دور مستشعر درجة الحرارة؟ <span class="tag">إجابة قصيرة</span></h3>
+<textarea id="q3" placeholder="اكتبي إجابتك هنا..."></textarea>
+</div>
+<div class="q">
+<h3>٤. صِلي نوع المستشعر بوظيفته المناسبة. <span class="tag">مطابقة</span></h3>
+<div class="matchrow"><strong>مستشعر الضوء</strong><select id="q4a"><option value="">اختاري الوظيفة</option><option value="light">قياس شدة الإضاءة</option><option value="sound">التقاط الأصوات</option><option value="pressure">قياس الضغط</option><option value="motion">اكتشاف الحركة</option></select></div>
+<div class="matchrow"><strong>مستشعر الصوت</strong><select id="q4b"><option value="">اختاري الوظيفة</option><option value="light">قياس شدة الإضاءة</option><option value="sound">التقاط الأصوات</option><option value="pressure">قياس الضغط</option><option value="motion">اكتشاف الحركة</option></select></div>
+<div class="matchrow"><strong>مستشعر الضغط</strong><select id="q4c"><option value="">اختاري الوظيفة</option><option value="light">قياس شدة الإضاءة</option><option value="sound">التقاط الأصوات</option><option value="pressure">قياس الضغط</option><option value="motion">اكتشاف الحركة</option></select></div>
+<div class="matchrow"><strong>مستشعر الحركة</strong><select id="q4d"><option value="">اختاري الوظيفة</option><option value="light">قياس شدة الإضاءة</option><option value="sound">التقاط الأصوات</option><option value="pressure">قياس الضغط</option><option value="motion">اكتشاف الحركة</option></select></div>
+<div class="feedback" id="f4"></div>
+</div>
+<div class="q" data-answer="a">
+<h3>٥. أي مثال يوضّح نظام تحكم مغلق الحلقة؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q5" value="a"> مكيف يقيس درجة حرارة الغرفة ويعدّل التبريد بناءً عليها</label>
+<label class="option"><input type="radio" name="q5" value="b"> مصباح يعمل بمفتاح تشغيل عادي فقط</label>
+<label class="option"><input type="radio" name="q5" value="c"> شاشة تعرض الوقت فقط</label>
+</div><div class="feedback"></div>
+</div>
+
+<div class="section-title">ثانيًا: الذكاء الاصطناعي وتطبيقاته</div>
+<div class="q" data-answer="b">
+<h3>٦. ما المقصود بالذكاء الاصطناعي؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q6" value="a"> جعل الجهاز يعمل دون أي بيانات أو تعليمات</label>
+<label class="option"><input type="radio" name="q6" value="b"> تمكين الأنظمة من أداء مهام تتطلب عادةً قدرات ذهنية بشرية</label>
+<label class="option"><input type="radio" name="q6" value="c"> استخدام الحاسب للكتابة فقط</label>
+</div><div class="feedback"></div>
+</div>
+<div class="q" data-answer="c">
+<h3>٧. ما المقصود بتعلّم الآلة؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q7" value="a"> إصلاح الأجهزة يدويًا</label>
+<label class="option"><input type="radio" name="q7" value="b"> تحويل الملفات إلى صور فقط</label>
+<label class="option"><input type="radio" name="q7" value="c"> تعلّم الأنظمة الأنماط من البيانات لتحسين أدائها أو التنبؤ</label>
+</div><div class="feedback"></div>
+</div>
+<div class="q" data-answer="a">
+<h3>٨. أي تطبيق يحوّل الكلام المنطوق إلى نص مكتوب؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q8" value="a"> التعرّف على الكلام</label>
+<label class="option"><input type="radio" name="q8" value="b"> التعرّف على الصور</label>
+<label class="option"><input type="radio" name="q8" value="c"> القيادة الذاتية</label>
+</div><div class="feedback"></div>
+</div>
+<div class="q">
+<h3>٩. اذكري مثالًا على استخدام الترجمة بمساعدة الحاسب. <span class="tag">إجابة قصيرة</span></h3>
+<textarea id="q9" placeholder="اكتبي مثالًا..."></textarea>
+</div>
+<div class="q" data-answer="b">
+<h3>١٠. ما المهمة الأساسية لأنظمة التعرّف على الصور؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q10" value="a"> قياس ضغط الهواء فقط</label>
+<label class="option"><input type="radio" name="q10" value="b"> تحليل الصور أو محتواها للتعرّف على أشياء أو أنماط فيها</label>
+<label class="option"><input type="radio" name="q10" value="c"> تشغيل الغسالة وفق مؤقت فقط</label>
+</div><div class="feedback"></div>
+</div>
+<div class="q">
+<h3>١١. اكتبي مثالًا واحدًا على مساعد شخصي افتراضي، ووضّحي كيف يساعد المستخدم. <span class="tag">إجابة قصيرة</span></h3>
+<textarea id="q11" placeholder="اسم المساعد وكيف يساعد..."></textarea>
+</div>
+<div class="q" data-answer="b">
+<h3>١٢. ما المقصود بالقيادة الذاتية؟ <span class="tag">اختيار من متعدد</span></h3>
+<div class="options">
+<label class="option"><input type="radio" name="q12" value="a"> قيادة السيارة يدويًا مع إيقاف جميع أنظمة المساعدة</label>
+<label class="option"><input type="radio" name="q12" value="b"> استخدام أنظمة وتقنيات تساعد السيارة على القيادة والتنقل بدرجات مختلفة من الاستقلالية</label>
+<label class="option"><input type="radio" name="q12" value="c"> نظام يقتصر على عرض سرعة السيارة فقط</label>
+</div><div class="feedback"></div>
+</div>
+
+<div class="actions noprint">
+<button class="check" onclick="checkAnswers()">تحققي من إجابات الاختيار والمطابقة</button>
+<button class="primary" onclick="savePDF()">حفظ الإجابات PDF</button>
+<button class="secondary" onclick="window.print()">طباعة الورقة</button>
+<button class="secondary" onclick="resetWork()">مسح الإجابات</button>
+</div>
+<div id="summary" class="feedback" aria-live="polite"></div>
+<footer>ورقة عمل تفاعلية — أجيبي عن الأسئلة ثم احفظي نسخة PDF من إجاباتك</footer>
+</main>
+<script>
+function checkAnswers(){
+ let total=0, correct=0;
+ document.querySelectorAll('.q[data-answer]').forEach(q=>{
+   total++; const chosen=q.querySelector('input[type=radio]:checked');
+   const fb=q.querySelector('.feedback');
+   if(chosen && chosen.value===q.dataset.answer){correct++;fb.textContent='إجابة صحيحة ✓';fb.className='feedback correct';}
+   else{fb.textContent=chosen?'راجعي الإجابة ✎':'لم تتم الإجابة بعد';fb.className='feedback wrong';}
+ });
+ const matches={q4a:'light',q4b:'sound',q4c:'pressure',q4d:'motion'};
+ let m=0; for(const [id,val] of Object.entries(matches)){if(document.getElementById(id).value===val)m++;}
+ total+=4;correct+=m;
+ const f=document.getElementById('f4'); f.textContent='المطابقة: '+m+' من 4';f.className='feedback '+(m===4?'correct':'wrong');
+ document.getElementById('summary').textContent='نتيجتك في الأسئلة الموضوعية والمطابقة: '+correct+' من '+total+' — الأسئلة القصيرة تحتاج إلى مراجعة إجاباتك بنفسك.';
+}
+function savePDF(){
+ // Ensure current form values are rendered in print and open the native print dialog.
+ document.querySelectorAll('textarea').forEach(el=>{el.setAttribute('data-print-value',el.value);});
+ window.print();
+}
+function resetWork(){
+ if(confirm('هل تريدين مسح جميع الإجابات؟')){
+ document.querySelectorAll('input[type=text],textarea').forEach(e=>e.value='');
+ document.querySelectorAll('input[type=radio]').forEach(e=>e.checked=false);
+ document.querySelectorAll('select').forEach(e=>e.selectedIndex=0);
+ document.querySelectorAll('.feedback').forEach(e=>{e.textContent='';});
+ document.getElementById('summary').textContent='';
+ }
+}
+</script>
+</body>
+</html>
